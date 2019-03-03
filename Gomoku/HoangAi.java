@@ -5,7 +5,7 @@ import java.util.*;
  * My Code that runs the AI utilising Minimax / Alpha - Beta pruning
  * Author: Hoang Le
  **/
-class Player161140218 extends GomokuPlayer {
+class HoangAi extends GomokuPlayer {
 
     long timeCounter;
     long maxTime = (long) 10000;
