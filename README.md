@@ -20,3 +20,14 @@ A Java class (GomokuReferee.class) is provided for developing and testing your p
 	batchTest — run a tournament where all players play against each other, without using the GUI; all moves and results of each game, plus a summary of the tournament, are printed to standard output. limit value — set the time limit per move to value (default 10.0 seconds).
 	delay value — set the minimum time between displaying successive moves to value (default 1.0 seconds).
 
+### How to run
+
+1)Clone this repository in your local one 
+
+2)cd from cmd into the directory
+
+3)Run GomokuReferee class (thats where the main is)
+
+4)Experiment with the algorithms provided for the game
+
+5)You can use trivial algorithms provided (Sequence & Random) or play yourself!
