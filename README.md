@@ -31,3 +31,45 @@ A Java class (GomokuReferee.class) is provided for developing and testing your p
 4)Experiment with the algorithms provided for the game
 
 5)You can use trivial algorithms provided (Sequence & Random) or play yourself!
+
+### Strategy
+
+The Gomoku AI is implemented with minimax with alpha-beta pruning. The AI works by
+utilising the minimax method which has one new parameter that differs from the pseudocode presented in the slides. This would be a time Counter which makes sure each move
+lasts 10 seconds otherwise just returns our values. It will start by an initialising call to
+minimax where it’s values will be returned in an integer array containing three values– row,
+column and total score respectively.
+
+The Algorithm works by getting all the legal moves (empty spaces) on the board and then
+temporarily. The evaluation function is quite a simple function where it will just add a running
+total where the evaluator will recognise chains of length one to five. From one to five
+respectively, a larger arbitrary amount will be added to the running total and this score will
+determine if the current move is the “best move” to utilise. Naturally if it finds a chain of five
+in any direction it will return a very large number relative to its predecessors which means
+this score will always take precedence
+
+Moving into more detail about the function it will check its adjacent same coloured stones in
+this fashion: Column, rows and then both directions. It does this by utilising three for loops
+where the outer loop will have counted any chains it may see through a variable called
+“consecutive”. The two inner loops will iterate through the rows and columns of the board
+with the added temporary “move” during the minimax call. It will then allocate 1, 800 and
+24000 points respectively for chains of one two and three. When it notices chains of four it
+must check if the chain: Has both ends open, if only one side is open, if both sides are
+closed, check if one side is blocked and is next to a grid border and check this for both the
+current player and opponent.
+
+The points for the counterpart opponent will also take away the same value away from the
+running total in order to accommodate if the move will be great relative to the stones around
+it. This will be zero sum and will then be checked back with the minimax call which it will then
+be put through alpha-beta pruning where it checks if the initial value is larger than negative
+infinity (since the AI will be the maximisingPlayer)
+
+To accommodate for the “brute-force” method I have incorporated I need to make it efficient
+as possible. A depth of four is the maximum is can be without further optimisations. A few
+optimisations which can be done would be prioritising long chain firsts and identifying them
+which means a full search with the for loop would not be necessary. It is also important to
+check if the temporary move is a winning move and so I have included a hasWon() function
+which will quickly check if there is a winning chain on the board. If so, it will the return the
+move where it has made the winning chain.
+
+
