@@ -1,5 +1,5 @@
 # Gomoku
-Artificial Intelligence: Gomoku
+
 <img src = "https://media.giphy.com/media/j6BxkHsRoLdCpPJp1L/giphy.gif"/>
 ## The aim
 
