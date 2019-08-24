@@ -1,6 +1,6 @@
-# GomokoGame
+# Gomoku
 Artificial Intelligence: Gomoku
-
+<img src = "https://i.imgur.com/GBk8UJd.gifv"/>
 ## The aim
 
 The aim of this assignment is to write a Java class to play the game Gomoku, or five-in-a-row, on an 8 ⇥ 8 board, using alpha-beta search. The game is played as follows: two players (white and black) take turns at placing a stone of his/her colour on an unoccupied square on the board (white moves first). The first player to complete a continuous horizontal, vertical or diagonal line of 5 or more stones of his/her colour is the winner (scoring 2 points). The loser scores 0. If all squares are occupied and neither player has won, then each player gets 1 point.
